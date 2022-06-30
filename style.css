@@ -1,0 +1,106 @@
+:root{
+    --bg-color:purple;
+    --text-color:#fff;
+    --second-color:rgb(82, 4, 82);
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+#btn{
+    margin: 10px 10px;
+    border-bottom: 2px solid var(--second-color);
+    border-top: none;
+    border-right: none;
+    background-color: var(--bg-color);
+    padding: .8rem 1.2rem .8rem 1.2rem;
+    color: var(--text-color);
+    font-weight: 700;
+    text-transform: uppercase;
+    border-radius: 2px;
+    box-shadow: 0 2px 4px rgba(0, 0,0,0.3);
+    transition: .8s;
+    border-left: 2px solid var(--second-color);
+    transition: 2s;
+}
+#btn:hover{
+    border-bottom: 4px solid var(--second-color);
+}
+.modal-wrapper{
+    height: 100%;
+    width:100%;
+    background-color: rgba(0, 0,0,0.3);
+    position: fixed;
+    top:0;
+    left: 0;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+    animation: modes;
+    animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+    animation-duration: .8s;
+    animation-fill-mode: forwards;
+   
+    
+}
+@keyframes modes{
+    from{top:-330px}
+    to{top:0;}
+}
+
+
+
+.modal{
+    background: var(--text-color);
+    width:600px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+   
+}
+
+.modal-header{
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    height: 50px;
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+h1{
+    position: relative;
+    margin-top: 4px;
+    left:190px;
+}
+span{
+    font-weight: lighter;
+    position: relative;
+    top:0;
+    left:320px;
+    margin-bottom: 40px;
+    cursor:pointer;
+    font-size: 2rem;
+    transition: .8s;
+    
+}
+
+.modal-body{
+    margin: 20px 20px;
+    flex: 2;
+}
+.modal-footer{
+    flex:.5;
+    background-color: var(--bg-color);
+    text-align: center;
+    color: var(--text-color);
+
+}
+.modal-footer p{
+    margin-top: 5px;
+}
